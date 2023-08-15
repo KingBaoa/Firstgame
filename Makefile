@@ -1,10 +1,10 @@
 
-object =  bounce2d.o 
+object =  bounce2d.o  block.o
 
 bounce2d :	$(object)
-	gcc $(object) -l curses -o bounce2d
+	gcc $(object) -l curses -o bounce2d 
 
-%.o : %.curses
+%.o : %.c
 	gcc -c $<
 
 .PHONY : clean

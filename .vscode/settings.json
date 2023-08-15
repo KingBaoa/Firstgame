@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "random": "c"
+        "random": "c",
+        "curses.h": "c",
+        "time.h": "c",
+        "bounce.h": "c"
     }
 }

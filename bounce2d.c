@@ -2,6 +2,7 @@
 #include <signal.h>
 #include "bounce.h"
 #include <sys/time.h>
+#include "block.h"
 
 /*
 
@@ -11,11 +12,13 @@ void set_up();
 void wrap_up();
 void test();
 
+
 int main()
 {
     int c;
 
     set_up();
+    init_block();
 
     while( (c = getchar()) != 'Q') {
         if(c == 'f' )    theball.x_ttm--;    //加快移速
@@ -44,6 +47,7 @@ void set_up()
     initscr();
     noecho();
     crmode();
+
 
     signal(SIGINT,SIG_IGN);
     mvaddch(theball.y_pos,theball.x_pos,theball.symbol);

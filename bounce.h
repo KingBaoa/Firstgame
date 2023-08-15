@@ -1,3 +1,6 @@
+#ifndef _BOUNCE_H
+#define _BOUNCE_H
+
 #define BLANK   ' '
 #define DFL_SYMODE  'O'
 
@@ -26,3 +29,6 @@ struct ppball
 
 int bounce_or_lose(struct ppball *bp);
 int set_ticker(int n_msecs);
+
+
+#endif
